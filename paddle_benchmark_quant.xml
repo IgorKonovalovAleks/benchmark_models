@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Tests>
+    <Test>
+        <Model>
+            <Task>Classification</Task>
+            <Name>Resnet50</Name>
+            <Precision>FP32</Precision>
+            <SourceFramework>PaddlePaddle</SourceFramework>
+            <ModelPath>D:\ws\dl-benchmark\src\quantization\paddlepaddle\res_dir\model.pdmodel</ModelPath>
+            <WeightsPath>D:\ws\dl-benchmark\src\quantization\paddlepaddle\res_dir\model.pdiparams</WeightsPath>
+        </Model>
+        <Dataset>
+            <Name>ImageNET</Name>
+            <Path>..\..\itlab-vision-dl-benchmark-data\Datasets\ImageNET</Path>
+        </Dataset>
+        <FrameworkIndependent>
+            <InferenceFramework>PaddlePaddle</InferenceFramework>
+            <BatchSize>10</BatchSize>
+            <Device>CPU</Device>
+            <IterationCount>10</IterationCount>
+            <TestTimeLimit>10</TestTimeLimit>
+        </FrameworkIndependent>
+        <FrameworkDependent>
+            <ChannelSwap></ChannelSwap>
+            <Layout></Layout>
+            <Mean>[123.675,116.28,103.53]</Mean>
+            <InputScale>[58.395,57.12,57.375]</InputScale>
+            <InputShape>[10,3,224,224]</InputShape>
+            <InputName>inputs</InputName>
+            <OutputNames>save_infer_model/scale_0.tmp_0</OutputNames>
+            <ThreadCount>16</ThreadCount>
+            <GPUMemSize></GPUMemSize>
+        </FrameworkDependent>
+    </Test>
+</Tests>
