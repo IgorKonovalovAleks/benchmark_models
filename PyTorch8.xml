@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Tests>
+    <Test>
+        <Model>
+            <Task>classification</Task>
+            <Name>resnet-50-pytorch</Name>
+            <Precision>FP32</Precision>
+            <SourceFramework>PyTorch</SourceFramework>
+            <ModelPath></ModelPath>
+            <WeightsPath>../../benchmark_models/resnet-50-pytorch/resnet50-19c8e357.pth</WeightsPath>
+        </Model>
+        <Dataset>
+            <Name>ImageNET</Name>
+            <Path>../../../itlab-vision-dl-benchmark-data/Datasets/ImageNET</Path>
+        </Dataset>
+        <FrameworkIndependent>
+            <InferenceFramework>PyTorch</InferenceFramework>
+            <BatchSize>8</BatchSize>
+            <Device>CPU</Device>
+            <IterationCount>10</IterationCount>
+            <TestTimeLimit>200</TestTimeLimit>
+        </FrameworkIndependent>
+        <FrameworkDependent>
+            <InputName>data</InputName>
+            <InputShape>[8,3,224,224]</InputShape>
+            <Mean>[123.675,116.28,103.53]</Mean>
+            <InputScale>[58.395,57.12,57.375]</InputScale>
+            <OutputName>prob</OutputName>
+            <ModelType></ModelType>
+            <InferenceMode></InferenceMode>
+            <TensorRTPrecision></TensorRTPrecision>
+            <UseModelConfig>True</UseModelConfig>
+        </FrameworkDependent>
+    </Test>
+</Tests>
