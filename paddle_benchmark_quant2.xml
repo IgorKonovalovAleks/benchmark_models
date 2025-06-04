@@ -6,8 +6,8 @@
             <Name>Resnet50</Name>
             <Precision>FP32</Precision>
             <SourceFramework>PaddlePaddle</SourceFramework>
-            <ModelPath>../../benchmark_models/res_dir_avg/model.pdmodel</ModelPath>
-            <WeightsPath>../../benchmark_models/res_dir_avg/model.pdiparams</WeightsPath>
+            <ModelPath>../../benchmark_models/res_dir/model.pdmodel</ModelPath>
+            <WeightsPath>../../benchmark_models/res_dir/model.pdiparams</WeightsPath>
         </Model>
         <Dataset>
             <Name>ImageNET</Name>
