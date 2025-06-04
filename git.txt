@@ -1,2 +1,0 @@
-RUN git clone --recursive https://github.com/itlab-vision/dl-benchmark.git --branch master --single-branch --depth 1
-git clone https://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@github.com/itlab-vision/itlab-vision-dl-benchmark-data.git
